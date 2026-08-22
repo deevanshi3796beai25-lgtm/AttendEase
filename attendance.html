@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | AttendEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-inner">
+
+            <a class="logo" href="index.html">
+                📘 <span>AttendEase</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle">
+
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-outline" href="login.html">Login</a>
+                <a class="btn btn-primary" href="signup.html">Sign Up</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+
+                <span class="eyebrow">Teacher Dashboard</span>
+
+                <h1>
+                    Mark
+                    <span class="gradient-text">Attendance</span>
+                </h1>
+
+                <p>
+                    Verify students and record today's attendance.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="dashboard-toolbar glass">
+
+                    <div>
+                        <strong>Class: CSE-AIML 2026</strong>
+                        <small>Today · 09:00 AM</small>
+                    </div>
+
+                    <div>
+                        <span class="badge">
+                            Present: <b id="presentCount">3</b>
+                        </span>
+
+                        <span class="badge danger">
+                            Absent: <b id="absentCount">1</b>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="attendance-table glass">
+
+                    <div class="table-head">
+                        <span>Student</span>
+                        <span>Roll No.</span>
+                        <span>Status</span>
+                        <span>Action</span>
+                    </div>
+
+                    <div class="att-row">
+                        <span>👩🏻 Aditi Sharma</span>
+                        <span>101</span>
+                        <span class="status present">Present</span>
+                        <button class="small-btn absent-btn">
+                            Mark Absent
+                        </button>
+                    </div>
+
+                    <div class="att-row">
+                        <span>👨🏻 Rohan Mehta</span>
+                        <span>102</span>
+                        <span class="status present">Present</span>
+                        <button class="small-btn absent-btn">
+                            Mark Absent
+                        </button>
+                    </div>
+
+                    <div class="att-row">
+                        <span>👩🏻 Simran Kaur</span>
+                        <span>103</span>
+                        <span class="status absent">Absent</span>
+                        <button class="small-btn present-btn">
+                            Mark Present
+                        </button>
+                    </div>
+
+                    <div class="att-row">
+                        <span>👨🏻 Kabir Anand</span>
+                        <span>104</span>
+                        <span class="status present">Present</span>
+                        <button class="small-btn absent-btn">
+                            Mark Absent
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="center-actions">
+
+                    <a class="btn btn-primary" href="analytics.html">
+                        View Analytics →
+                    </a>
+
+                    <a class="btn btn-outline" href="anti-proxy.html">
+                        Run Proxy Check
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+                <a class="logo footer-logo" href="index.html">
+                    📘 <span>AttendEase</span>
+                </a>
+
+                <p>
+                    Smart, secure and modern online attendance management.
+                </p>
+            </div>
+
+            <div>
+                <h4>Pages</h4>
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+            </div>
+
+            <div>
+                <h4>Tools</h4>
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="social-links" aria-label="Social media links">
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        Twitter ↗
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        Facebook ↗
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AttendEase · All rights reserved.
+        </div>
+
+    </footer>
+
+    <script>
+        const rows = document.querySelectorAll('.att-row');
+        const presentCountEl = document.getElementById('presentCount');
+        const absentCountEl = document.getElementById('absentCount');
+
+        function updateCounts() {
+            const presentCount = document.querySelectorAll('.att-row .status.present').length;
+            const absentCount = document.querySelectorAll('.att-row .status.absent').length;
+            presentCountEl.textContent = presentCount;
+            absentCountEl.textContent = absentCount;
+        }
+
+        rows.forEach(row => {
+            const statusEl = row.querySelector('.status');
+            const btn = row.querySelector('.small-btn');
+
+            btn.addEventListener('click', () => {
+                const isPresent = statusEl.classList.contains('present');
+
+                if (isPresent) {
+                    // Switch to Absent
+                    statusEl.classList.remove('present');
+                    statusEl.classList.add('absent');
+                    statusEl.textContent = 'Absent';
+
+                    btn.classList.remove('absent-btn');
+                    btn.classList.add('present-btn');
+                    btn.textContent = 'Mark Present';
+                } else {
+                    // Switch to Present
+                    statusEl.classList.remove('absent');
+                    statusEl.classList.add('present');
+                    statusEl.textContent = 'Present';
+
+                    btn.classList.remove('present-btn');
+                    btn.classList.add('absent-btn');
+                    btn.textContent = 'Mark Absent';
+                }
+
+                updateCounts();
+            });
+        });
+
+        updateCounts();
+    </script>
+
+</body>
+
+</html>

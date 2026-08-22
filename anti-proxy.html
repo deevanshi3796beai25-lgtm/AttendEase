@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Proxy | AttendEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-inner">
+
+            <a class="logo" href="index.html">
+                📘 <span>AttendEase</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle">
+
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="wheel.html">Spin Wheel</a>
+                <a class="active" href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-outline" href="login.html">Login</a>
+                <a class="btn btn-primary" href="signup.html">Sign Up</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+
+                <span class="eyebrow">Attendance Security</span>
+
+                <h1>
+                    Anti-Proxy
+                    <span class="gradient-text">Verification</span>
+                </h1>
+
+                <p>
+                    A front-end demonstration of a multi-step verification flow
+                    before attendance is accepted.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section">
+
+            <div class="container anti-grid">
+
+                <div class="glass verify-card">
+
+                    <div class="shield">🛡️</div>
+
+                    <h2>Verify Student</h2>
+
+                    <p>
+                        Enter the student's roll number and continue to attendance.
+                    </p>
+
+                    <form action="attendance.html" method="get">
+
+                        <label for="rollInput">Roll number</label>
+
+                        <input
+                            id="rollInput"
+                            name="roll"
+                            class="input"
+                            required
+                            pattern="[0-9]+"
+                            inputmode="numeric"
+                            placeholder="Enter roll number e.g. 101"
+                        >
+
+                        <button class="btn btn-primary full" type="submit">
+                            Start Verification
+                        </button>
+
+                    </form>
+
+                    <div class="verify-result">
+                        Roll number is checked by your browser before continuing.
+                    </div>
+
+                    <input type="checkbox" id="qrReveal">
+
+                    <label for="qrReveal" class="btn btn-outline full qr-trigger">
+                        Show Attendance QR
+                    </label>
+
+                    <div class="qr-box">
+
+                        <div class="qr-canvas">
+                            <img
+                                src="qr-code.svg"
+                                alt="Attendance verification QR code"
+                                width="160"
+                                height="160"
+                            >
+                        </div>
+
+                        <p class="qr-timer">
+                            Visible for a few seconds —
+                            <b>scan now</b>, then click again to bring it back.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="glass security-info">
+
+                    <span class="eyebrow">Demo Flow</span>
+
+                    <div class="security-step">
+                        <b>01</b>
+                        <span>
+                            <strong>Roll Number</strong>
+                            Identify the student.
+                        </span>
+                    </div>
+
+                    <div class="security-step">
+                        <b>02</b>
+                        <span>
+                            <strong>Verification</strong>
+                            Validate the required roll number.
+                        </span>
+                    </div>
+
+                    <div class="security-step">
+                        <b>03</b>
+                        <span>
+                            <strong>Attendance</strong>
+                            Continue to the attendance page.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+                <a class="logo footer-logo" href="index.html">
+                    📘 <span>AttendEase</span>
+                </a>
+
+                <p>
+                    Smart, secure and modern online attendance management.
+                </p>
+            </div>
+
+            <div>
+                <h4>Pages</h4>
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+            </div>
+
+            <div>
+                <h4>Tools</h4>
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="social-links" aria-label="Social media links">
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="AttendEase on Instagram"
+                    >
+                        Instagram ↗
+                    </a>
+
+                    <a
+                        href="https://twitter.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="AttendEase on Twitter"
+                    >
+                        Twitter ↗
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="AttendEase on Facebook"
+                    >
+                        Facebook ↗
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AttendEase · All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

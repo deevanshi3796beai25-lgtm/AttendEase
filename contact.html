@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AttendEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-inner">
+
+            <a class="logo" href="index.html">
+                📘 <span>AttendEase</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle">
+
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a class="active" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-outline" href="login.html">Login</a>
+                <a class="btn btn-primary" href="signup.html">Sign Up</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+
+                <span class="eyebrow">Contact Us</span>
+
+                <h1>
+                    Let's talk
+                    <span class="gradient-text">attendance.</span>
+                </h1>
+
+                <p>
+                    Have a question, suggestion or demo request?
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section">
+
+            <div class="container contact-grid">
+
+                <form
+                    class="glass contact-form"
+                    action="mailto:hello@attendease.app"
+                    method="post"
+                    enctype="text/plain"
+                >
+
+                    <div class="form-row">
+
+                        <div>
+                            <label for="contact-name">Name</label>
+
+                            <input
+                                id="contact-name"
+                                class="input"
+                                name="name"
+                                autocomplete="name"
+                                required
+                                placeholder="Your name"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="contact-email">Email</label>
+
+                            <input
+                                id="contact-email"
+                                class="input"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                required
+                                placeholder="you@example.com"
+                            >
+                        </div>
+
+                    </div>
+
+                    <label for="contact-subject">Subject</label>
+
+                    <input
+                        id="contact-subject"
+                        class="input"
+                        name="subject"
+                        required
+                        placeholder="How can we help?"
+                    >
+
+                    <label for="contact-message">Message</label>
+
+                    <textarea
+                        id="contact-message"
+                        class="input"
+                        name="message"
+                        required
+                        placeholder="Write your message..."
+                    ></textarea>
+
+                    <button class="btn btn-primary" type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <div class="contact-info">
+
+                    <div class="glass contact-card">
+                        <div class="icon">✉️</div>
+
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@attendease.app</p>
+                        </div>
+                    </div>
+
+                    <div class="glass contact-card">
+                        <div class="icon">📞</div>
+
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="glass contact-card">
+                        <div class="icon">📍</div>
+
+                        <div>
+                            <h3>Location</h3>
+                            <p>India</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+                <a class="logo footer-logo" href="index.html">
+                    📘 <span>AttendEase</span>
+                </a>
+
+                <p>
+                    Smart, secure and modern online attendance management.
+                </p>
+            </div>
+
+            <div>
+                <h4>Pages</h4>
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+            </div>
+
+            <div>
+                <h4>Tools</h4>
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="social-links" aria-label="Social media links">
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        Twitter ↗
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        Facebook ↗
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AttendEase · All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

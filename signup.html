@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | AttendEase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="navbar">
+
+        <div class="nav-inner">
+
+            <a class="logo" href="index.html">
+                📘 <span>AttendEase</span>
+            </a>
+
+            <a class="btn btn-outline" href="index.html">
+                ← Home
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="auth-section">
+
+            <div class="auth-card glass">
+
+                <div class="auth-icon">🧑‍🎓</div>
+
+                <span class="eyebrow">Get Started</span>
+
+                <h1>Create Account</h1>
+
+                <p>
+                    Register as a student, teacher or administrator.
+                </p>
+
+                <form action="login.html" method="get">
+
+                    <label for="signup-name">Full Name</label>
+
+                    <input
+                        id="signup-name"
+                        class="input"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        placeholder="Your name"
+                    >
+
+                    <label for="signup-email">Email</label>
+
+                    <input
+                        id="signup-email"
+                        class="input"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                        placeholder="you@example.com"
+                    >
+
+                    <label for="signup-role">Role</label>
+
+                    <select
+                        id="signup-role"
+                        class="input"
+                        name="role"
+                        required
+                    >
+                        <option value="">Choose a role</option>
+                        <option>Student</option>
+                        <option>Teacher</option>
+                        <option>Administrator</option>
+                    </select>
+
+                    <label for="signup-password">Password</label>
+
+                    <input
+                        id="signup-password"
+                        class="input"
+                        name="password"
+                        type="password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                        placeholder="Create password"
+                    >
+
+                    <button class="btn btn-primary full" type="submit">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already registered?
+                    <a href="login.html">Login</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a class="logo footer-logo" href="index.html">
+                    📘 <span>AttendEase</span>
+                </a>
+
+                <p>
+                    Smart, secure and modern online attendance management.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Pages</h4>
+
+                <a href="about.html">About</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="analytics.html">Analytics</a>
+
+            </div>
+
+            <div>
+
+                <h4>Tools</h4>
+
+                <a href="wheel.html">Spin Wheel</a>
+                <a href="anti-proxy.html">Anti-Proxy</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="social-links" aria-label="Social media links">
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        Twitter ↗
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        Facebook ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AttendEase · All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
