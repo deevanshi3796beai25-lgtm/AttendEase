@@ -96,18 +96,23 @@
 
                         <h3>Ready to pick?</h3>
 
-                        <p class="spin-result">
-                            🎉 Landed on: Simran Kaur
-                        </p>
+                        <p class="spin-result" aria-live="polite"></p>
 
-                        <label for="spinToggle" class="btn btn-primary spin-btn">
-                            Spin the Wheel
-                        </label>
+                        <button type="button" class="btn btn-primary spin-btn">Spin the Wheel</button>
 
-                        <p class="spin-note">
-                            CSS-only demo spin — it always lands on the same name here.
-                            A real random draw needs JavaScript or a backend to pick fairly.
-                        </p>
+                        <label class="remember"><input id="avoidRepeatWinners" type="checkbox" checked> Do not pick previous winners again</label><button type="button" class="btn btn-outline" id="resetWheelWinners">Reset winner history</button><h3>Winner history</h3><ol id="winnerHistory" class="winner-history"></ol>
+                        <p class="spin-note">Add 2–8 names below, then spin to make a random selection.</p>
+                        <div class="wheel-editor">
+                            <label for="wheelNames">Student names (one per line)</label>
+                            <textarea class="input" id="wheelNames" rows="6" spellcheck="false">Aditi
+Rohan
+Simran
+Kabir
+Neha
+Arjun</textarea>
+                            <button type="button" class="btn btn-outline" id="updateWheelNames">Update names</button>
+                            <p id="wheelNamesStatus" class="search-message" aria-live="polite">6 students on the wheel.</p>
+                        </div>
 
                     </div>
 
@@ -192,6 +197,7 @@
 
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
