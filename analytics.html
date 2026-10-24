@@ -73,54 +73,37 @@
 
                     <div class="metric glass">
                         <span>Overall Attendance</span>
-                        <strong>92.6%</strong>
-                        <small>↑ 3.2% this month</small>
+                        <strong id="overallAttendance">—</strong>
+                        <small id="overallAttendanceNote">Based on saved attendance records</small>
                     </div>
 
                     <div class="metric glass">
                         <span>Present Today</span>
-                        <strong>86</strong>
-                        <small>out of 94 students</small>
+                        <strong id="analyticsPresentToday">—</strong>
+                        <small id="analyticsPresentNote">of 4 students</small>
                     </div>
 
                     <div class="metric glass">
                         <span>Low Attendance</span>
-                        <strong>08</strong>
-                        <small>students below 75%</small>
+                        <strong id="lowAttendanceCount">—</strong>
+                        <small id="lowAttendanceNote">students below 75%</small>
                     </div>
 
                 </div>
 
+                <div class="analytics-filter glass"><div><label for="analyticsFrom">From</label><input class="input" id="analyticsFrom" type="date"></div><div><label for="analyticsTo">To</label><input class="input" id="analyticsTo" type="date"></div><button class="btn btn-outline" id="clearAnalyticsFilter" type="button">Clear dates</button></div>
                 <div class="glass chart-card">
 
                     <div class="dash-head">
                         <h3>Weekly Attendance</h3>
-                        <span class="badge">Mon–Fri</span>
+                        <span class="badge" id="analyticsChartNote">Recorded days</span>
                     </div>
 
-                    <div class="big-chart">
-
-                        <i style="height: 62%">
-                            <b>Mon</b>
-                        </i>
-
-                        <i style="height: 78%">
-                            <b>Tue</b>
-                        </i>
-
-                        <i style="height: 71%">
-                            <b>Wed</b>
-                        </i>
-
-                        <i style="height: 88%">
-                            <b>Thu</b>
-                        </i>
-
-                        <i style="height: 94%">
-                            <b>Fri</b>
-                        </i>
-
+                    <div class="low-attendance-list" id="lowAttendanceList" aria-live="polite"></div>
+                    <div class="big-chart" id="attendanceHistoryChart" aria-label="Attendance percentage for recent recorded days">
+                        <p class="chart-empty">Attendance history will appear here after attendance is saved for different days.</p>
                     </div>
+                    <p class="chart-caption">The chart uses saved attendance records in this browser. Historical records begin accumulating as attendance is marked on different dates.</p>
 
                 </div>
 
@@ -182,6 +165,7 @@
 
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
