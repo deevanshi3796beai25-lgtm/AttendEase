@@ -88,6 +88,24 @@
 
                 </div>
 
+                <div class="attendance-tools glass">
+                    <div><label for="attendanceDate">Attendance date</label><input class="input" id="attendanceDate" type="date"></div>
+                    <div class="bulk-actions"><button class="btn btn-outline" id="allPresent" type="button">Mark all present</button><button class="btn btn-outline" id="allAbsent" type="button">Mark all absent</button><button class="btn btn-outline" id="undoAttendance" type="button" disabled>Undo last change</button><button class="btn btn-outline" id="exportAttendance" type="button">Export CSV</button></div>
+                    <div class="attendance-search-wrap">
+                        <label for="studentSearch">Find a student</label>
+                        <input class="input" id="studentSearch" type="search" placeholder="Search name or roll number..." autocomplete="off">
+                    </div>
+                    <div class="attendance-filter-wrap">
+                        <label for="attendanceFilter">Show</label>
+                        <select class="input" id="attendanceFilter">
+                            <option value="all">All students</option>
+                            <option value="present">Present students</option>
+                            <option value="absent">Absent students</option>
+                        </select>
+                    </div>
+                    <p id="attendanceSearchMessage" class="search-message" aria-live="polite"></p>
+                </div>
+
                 <div class="attendance-table glass">
 
                     <div class="table-head">
@@ -133,6 +151,17 @@
                         </button>
                     </div>
 
+                </div>
+
+                <div class="attendance-summary glass" aria-live="polite">
+                    <div class="summary-heading">
+                        <div><span class="eyebrow">Live Summary</span><h3>Today's attendance</h3></div>
+                        <strong id="attendanceRate">75%</strong>
+                    </div>
+                    <div class="progress-track" role="progressbar" aria-label="Today's attendance rate" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" id="attendanceProgress">
+                        <span id="attendanceProgressFill" style="width:75%"></span>
+                    </div>
+                    <p id="attendanceSummaryText">3 of 4 students are present today.</p>
                 </div>
 
                 <div class="center-actions">
@@ -205,52 +234,7 @@
 
     </footer>
 
-    <script>
-        const rows = document.querySelectorAll('.att-row');
-        const presentCountEl = document.getElementById('presentCount');
-        const absentCountEl = document.getElementById('absentCount');
-
-        function updateCounts() {
-            const presentCount = document.querySelectorAll('.att-row .status.present').length;
-            const absentCount = document.querySelectorAll('.att-row .status.absent').length;
-            presentCountEl.textContent = presentCount;
-            absentCountEl.textContent = absentCount;
-        }
-
-        rows.forEach(row => {
-            const statusEl = row.querySelector('.status');
-            const btn = row.querySelector('.small-btn');
-
-            btn.addEventListener('click', () => {
-                const isPresent = statusEl.classList.contains('present');
-
-                if (isPresent) {
-                    // Switch to Absent
-                    statusEl.classList.remove('present');
-                    statusEl.classList.add('absent');
-                    statusEl.textContent = 'Absent';
-
-                    btn.classList.remove('absent-btn');
-                    btn.classList.add('present-btn');
-                    btn.textContent = 'Mark Present';
-                } else {
-                    // Switch to Present
-                    statusEl.classList.remove('absent');
-                    statusEl.classList.add('present');
-                    statusEl.textContent = 'Present';
-
-                    btn.classList.remove('present-btn');
-                    btn.classList.add('absent-btn');
-                    btn.textContent = 'Mark Absent';
-                }
-
-                updateCounts();
-            });
-        });
-
-        updateCounts();
-    </script>
-
+    <script src="script.js" defer></script>
 </body>
 
 </html>
