@@ -101,6 +101,8 @@
 
                     </form>
 
+                    <div class="camera-tools"><button class="btn btn-outline" id="startQrCamera" type="button">Scan QR with camera</button><button class="btn btn-outline" id="stopQrCamera" type="button" hidden>Stop camera</button><video id="qrCamera" playsinline muted hidden></video><p id="cameraStatus" class="search-message" aria-live="polite">Camera scanning requires browser support and permission.</p></div>
+                    <h3>Verified today</h3><ul id="verifiedRolls" class="verified-rolls"></ul>
                     <div class="verify-result">
                         Roll number is checked by your browser before continuing.
                     </div>
@@ -234,6 +236,7 @@
 
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
